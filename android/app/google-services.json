@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "205536986171",
+    "project_id": "todo-trlnia",
+    "storage_bucket": "todo-trlnia.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205536986171:android:cbc1d1845130794b7ec81e",
+        "android_client_info": {
+          "package_name": "com.mycompany.todo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWMXrWqf9iHYC4MRIumEBmBLMOAe3ELZw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
