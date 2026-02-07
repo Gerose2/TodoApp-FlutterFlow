@@ -624,6 +624,45 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                       borderRadius: BorderRadius.circular(24.0),
                     ),
                   ),
+                  FFButtonWidget(
+                    onPressed: () async {
+                      safeSetState(() {
+                        _model.nameTextController?.clear();
+                        _model.homeTownTextController?.clear();
+                      });
+                    },
+                    text: 'clear',
+                    options: FFButtonOptions(
+                      height: 70.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                      iconPadding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: FlutterFlowTheme.of(context).primary,
+                      textStyle:
+                          FlutterFlowTheme.of(context).labelMedium.override(
+                                font: GoogleFonts.inter(
+                                  fontWeight: FontWeight.w500,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelMedium
+                                      .fontStyle,
+                                ),
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                fontSize: 20.0,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w500,
+                                fontStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .fontStyle,
+                              ),
+                      elevation: 0.0,
+                      borderSide: BorderSide(
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        width: 1.0,
+                      ),
+                      borderRadius: BorderRadius.circular(24.0),
+                    ),
+                  ),
                 ],
               ),
             ),
