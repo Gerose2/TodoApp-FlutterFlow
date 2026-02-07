@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/todo-firestore.schema.json",
+  "title": "ToDo App Firestore Database Schema",
+  "type": "object",
+  "properties": {
+    "users": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/user" }
+    },
+    "tasks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/task" }
+    }
+  },
+  "required": ["users", "tasks"],
+  "$defs": {
+    "user": {
+      "type": "object",
+      "title": "User Document",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Authentication user ID"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "homeTown": {
+          "type": "string"
+        },
+        "birthday": {
+          "type": "string",
+          "format": "date-time",
+          "description": "User birthday stored as Firestore timestamp"
+        },
+        "created_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Account creation timestamp"
+        }
+      },
+      "required": [
+        "uid",
+        "email",
+        "display_name",
+        "homeTown",
+        "birthday",
+        "created_time"
+      ],
+      "additionalProperties": false
+    },
+
+    "task": {
+      "type": "object",
+      "title": "Task Document",
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "description": "Unique task identifier"
+        },
+        "uid": {
+          "type": "string",
+          "description": "User ID of task owner"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "completed": {
+          "type": "boolean"
+        },
+        "created_time": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "due_date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "task_id",
+        "uid",
+        "title",
+        "completed",
+        "created_time"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
