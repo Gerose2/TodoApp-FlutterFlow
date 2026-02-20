@@ -141,8 +141,8 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'task': TaskWidget(),
       'Completed': CompletedWidget(),
+      'task': TaskWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -164,7 +164,7 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.line_weight_sharp,
+              Icons.checklist_rounded,
               size: 24.0,
             ),
             label: 'Home',
@@ -172,7 +172,7 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.checklist_rounded,
+              Icons.line_weight_sharp,
               size: 24.0,
             ),
             label: 'Home',
